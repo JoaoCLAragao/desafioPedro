@@ -1,5 +1,6 @@
 package br.com.cotemig.desafiopedro
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.RadioButton
@@ -11,19 +12,29 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         btn_proxima_tela1.setOnClickListener {
-        tipoProduto()
+        impostoTipoProduto()
         }
 
     }
 
-    fun tipoProduto(){
+    fun impostoTipoProduto(){
         var imposto : Double
         if (RBtn_eletronico.isChecked){
             imposto = 0.3
         } else if (RBtn_alimentos.isChecked){
             imposto = 0.35
-        } else if (RBtn_medicamentos.isChecked)
+        } else if (RBtn_medicamentos.isChecked){
+            imposto = 0.4
+        } else if (RBtn_veiculos.isChecked){
+            imposto = 0.15
+        } else {
+            imposto = 0.25
+        }
 
+        var intentValorImposto = Intent(this, valorImposto::class.java)
+        intentValorImposto.putExtra("imposto", imposto)
+        startActivity(intentValorImposto)
+        finish()
     }
 }
 

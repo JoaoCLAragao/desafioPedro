@@ -16,9 +16,10 @@
     android:text="@string/o_valor_a_ser_pago_de_imposto"/>
 
     <TextView
+        android:id="@+id/txt_v_valor_de_imposto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="4000"
+        android:text=""
         android:textSize="30sp"
         android:gravity="center"
         android:layout_marginTop="30dp"

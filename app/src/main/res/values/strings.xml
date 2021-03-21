@@ -11,4 +11,5 @@
     <string name="valor">valor</string>
     <string name="o_valor_a_ser_pago_de_imposto">O valor a ser pago de imposto é:</string>
     <string name="voltar_pro_inicio">Voltar pro Inicio</string>
+    <string name="valor_final">Reais</string>
 </resources>
